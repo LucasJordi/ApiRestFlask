@@ -34,5 +34,54 @@
 
 <h3>Clientes</h3>
 
+<p>Na pasta "tables" em "controllers" estão aramazenados alguns arquivos com dados pré-armazenados para teste. As rotas para a interação com clientes estão todas armazenadas no arquivo "clientsroutes.py". Para ter a visualização dos cadastros disponíveis vá até a rota "/clients"</p>
+
+
+
+<pre> <code>
+  <h4>http://127.0.0.1:4000/clients</h4>
+  
+  {
+  "Clients": [
+    {
+      "email": "jse@gmmail.com", 
+      "id": 1, 
+      "name": "Josu\u00e9 Almeida", 
+      "number": "71222222", 
+      "password": "123"
+    }, 
+    {
+      "email": "amandapache@gmmail.com", 
+      "id": 2, 
+      "name": "Amanda Pacheco", 
+      "number": "71222342", 
+      "password": "123"
+    }, 
+    {
+      "email": "luans@gmmail.com", 
+      "id": 3, 
+      "name": "Luan Serra", 
+      "password": "123", 
+      "telefone": "71222222"
+    }, 
+    {
+      "email": "luana@gmmail.com", 
+      "id": 4, 
+      "name": "Luana Souza", 
+      "number": "71228722", 
+      "password": "123"
+    }, 
+    {
+      "email": "ric.ant@gmmail.com", 
+      "id": 5, 
+      "name": "Ricardo Ant\u00f4nio", 
+      "number": "71672222", 
+      "password": "123"
+    }
+  ], 
+  "message": "Clients List"
+}
+</code></pre>
+
 
 
