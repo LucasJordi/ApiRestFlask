@@ -19,12 +19,12 @@
 
 <h2>Utilização</h2>
 
-<p>Antes de iniciar a aplicação lembre-se de puxar as dependências do requirements.txt com o pip. Para dar inicio a aplicação basta apenas executar o arquivo "run.py". Após executar o arquivo "run.py" ao acessar o locashost http://127.0.0.1:4000/  é preciso visualizar a seguinte mensagem:</p>
+<p>Antes de iniciar a aplicação lembre-se de puxar as dependências do requirements.txt com o pip. Para dar inicio a aplicação basta apenas executar o arquivo "run.py". Após executar o arquivo "run.py" ao acessar o locashost ou o link https://api-flask-commerce.herokuapp.com/  é preciso visualizar a seguinte mensagem:</p>
 
 
 
 <pre><code> 
-  http://127.0.0.1:4000/
+  http://127.0.0.1:4000/ ou https://api-flask-commerce.herokuapp.com/
 
 
 {
@@ -43,7 +43,7 @@
 
 
 <pre> <code>
-  http://127.0.0.1:4000/clients
+  http://127.0.0.1:4000/clients ou https://api-flask-commerce.herokuapp.com/clients
   
   {
   "Clients": [
@@ -91,7 +91,7 @@
 
 
 <code><pre>
-  http://127.0.0.1:4000/clients/2
+  http://127.0.0.1:4000/clients/2  ou https://api-flask-commerce.herokuapp.com/clients/2
   [
   {
     "email": "amandapache@gmmail.com", 
@@ -117,7 +117,7 @@
 <code><pre>
   <p>#Acessando a lista de produtos</p>
   
-    http://127.0.0.1:4000/products
+    http://127.0.0.1:4000/products ou https://api-flask-commerce.herokuapp.com/products
     
     
     
@@ -167,7 +167,7 @@
 <h4>Acessar um produto específico</h4>
 <code><pre>
 
-  http://127.0.0.1:4000/products/1
+  http://127.0.0.1:4000/products/1 ou https://api-flask-commerce.herokuapp.com/products/1
   
   
 [
@@ -194,7 +194,7 @@
 
 <code><pre>
 
-  http://127.0.0.1:4000/orders/all
+  http://127.0.0.1:4000/orders/all ou https://api-flask-commerce.herokuapp.com/orders/all
   
   []
 </code></pre>
@@ -204,9 +204,9 @@
 
 <code><pre>
 
-  http://127.0.0.1:4000/orders/createorder/1
-  http://127.0.0.1:4000/orders/createorder/2
-  http://127.0.0.1:4000/orders/createorder/3
+  http://127.0.0.1:4000/orders/createorder/1 ou https://api-flask-commerce.herokuapp.com/createorder/1
+  http://127.0.0.1:4000/orders/createorder/2 ou https://api-flask-commerce.herokuapp.com/createorder/2
+  http://127.0.0.1:4000/orders/createorder/3 ou https://api-flask-commerce.herokuapp.com/createorder/3
   
   
 {
@@ -242,7 +242,7 @@
 <p>Para finalizar a compra basta acessar a rota "/orders/createorder/submit". Se recebeu a mensagem abaixo significa que está tudo ok:</p>
 
 <code><pre> 
-  http://127.0.0.1:4000/orders/createorder/submit
+  http://127.0.0.1:4000/orders/createorder/submit ou https://api-flask-commerce.herokuapp.com/createorder/submit
   
   Submit!
 
@@ -254,7 +254,7 @@
 
 <code><pre>
 
-http://127.0.0.1:4000/orders/all
+http://127.0.0.1:4000/orders/all ou https://api-flask-commerce.herokuapp.com/orders/all
 
 [
   [
