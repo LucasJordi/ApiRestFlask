@@ -17,7 +17,7 @@ def FindProduct(product_id):
         return jsonify(search_id)
     return 'Product not Found!'
 
-
+#Using the 'POST' method to add a client
 @app.route('/products',methods=['POST'])
 def AddProduct():
     new_product={
@@ -31,7 +31,7 @@ def AddProduct():
     return 'Received'
 
 
-
+#Update product using 'PUT' method
 @app.route('/products/<int:product_id>',methods=['PUT'])
 def EditProduct(product_id):
     search_id=[product for product in products if product['id'] == product_id]
@@ -42,3 +42,19 @@ def EditProduct(product_id):
         search_id[0]['quantity']=request.json['quantity']
         return 'Save changes!'
     return 'Not found'    
+
+
+
+
+#Delete product using 'DELETE' methods
+
+@app.route('/products/<int:product_id>',methods=['DELETE'])
+def DeleteProduct(client_id):
+    search_id=[product for product in products if product['id'] == product_id]
+    if(len(search_id)>0):
+        products.remove(search_id[0])
+        return 'Deleted!'
+    return 'Not Found!'    
+
+
+
