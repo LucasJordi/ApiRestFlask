@@ -106,3 +106,64 @@ http://127.0.0.1:4000/
 <h4>Adicionar,atualizar dados e deletar clientes na lista</h4>
 
 <p>Para adicionar algum cliente a lista basta utilizar o método 'POST' na rota "/clients". Caso deseje modificar algum dado de cliente na lista utilize a rota "/clients/id_cliente" com o método 'PUT'. Para deletar o cliente da lista basta utilizar a mesma rota /clients/id_cliente", mas com o método 'DELETE'. </p>
+
+
+
+
+<h3>Produtos</h3>
+
+<p>A forma como o código interage com os produtos segue a mesma lógica da manipulação de clientes. A única mudança são as rotas:</p>
+
+<code><pre>
+  <p>#Acessando a lista de produtos</p>
+  
+    http://127.0.0.1:4000/products
+    
+    
+    
+    {
+  "message": "Products List", 
+  "products": [
+    {
+      "brand": "Samsung", 
+      "id": 1, 
+      "name": "monitor", 
+      "price": 1000, 
+      "quantity": 10
+    }, 
+    {
+      "brand": "Dell", 
+      "id": 2, 
+      "name": "laptop", 
+      "price": 5000, 
+      "quantity": 22
+    }, 
+    {
+      "brand": "Razer", 
+      "id": 3, 
+      "name": "mouse", 
+      "price": 120, 
+      "quantity": 30
+    }, 
+    {
+      "brand": "Razer", 
+      "id": 4, 
+      "name": "mouse", 
+      "price": 120, 
+      "quantity": 30
+    }, 
+    {
+      "brand": "Razer", 
+      "id": 5, 
+      "name": "keyboard", 
+      "price": 200, 
+      "quantity": 2
+    }
+  ]
+}
+  
+</code></pre>
+
+
+<h3>Ordens de compra</h3>
+
