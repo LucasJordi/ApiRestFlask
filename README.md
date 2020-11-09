@@ -23,7 +23,11 @@
 
 
 
-<pre><code>{
+<pre><code> 
+http://127.0.0.1:4000/
+
+
+{
   "message": "Everything ok!"
 }
 </code></pre>
@@ -39,7 +43,7 @@
 
 
 <pre> <code>
-  <h4>http://127.0.0.1:4000/clients</h4>
+  http://127.0.0.1:4000/clients
   
   {
   "Clients": [
@@ -99,3 +103,6 @@
 ]
 </code></pre>
 
+<h4>Adicionar,atualizar dados e deletar clientes na lista</h4>
+
+<p>Para adicionar algum cliente a lista basta utilizar o método 'POST' na rota "/clients". Caso deseje modificar algum dado de cliente na lista utilize a rota "/clients/id_cliente" com o método 'PUT'. Para deletar o cliente da lista basta utilizar a mesma rota /clients/id_cliente", mas com o método 'DELETE'. </p>
