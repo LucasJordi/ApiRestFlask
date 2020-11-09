@@ -24,7 +24,7 @@
 
 
 <pre><code> 
-http://127.0.0.1:4000/
+  http://127.0.0.1:4000/
 
 
 {
@@ -164,6 +164,125 @@ http://127.0.0.1:4000/
   
 </code></pre>
 
+<h4>Acessar um produto específico</h4>
+<code><pre>
+
+  http://127.0.0.1:4000/products/1
+  
+  
+[
+  {
+    "brand": "Samsung", 
+    "id": 1, 
+    "name": "monitor", 
+    "price": 1000, 
+    "quantity": 10
+  }
+]  
+
+
+
+</code></pre>
+
+<p>Da mesma forma como é feito em clientes é possível adicionar,atualizar ou deletar os dados manipulando as rotas com seus respectivos métodos 'GET' ,'PUT', 'DELETE'.</p>
 
 <h3>Ordens de compra</h3>
+
+<p>Para a manipulação das ordens de compra foi feito um interação junto com os dados de produtos cadastrados.Para acessar a lista de ordens basta ir para a rota "/orders/all". Como nenhuma ordem foi feita a lista retorna vazia.</p>
+
+
+
+<code><pre>
+
+  http://127.0.0.1:4000/orders/all
+  
+  []
+</code></pre>
+
+<p>Para começarmos a inserir produtos a ordem é preciso acessar a rota "/orders/createorder/id_do_produto_escolhido". Junto com a lista de produtos é possível ver o total da compra. Vamos fazer um teste de ordem com os produtos de id 1, 2 e 3:</p>
+
+
+<code><pre>
+
+  http://127.0.0.1:4000/orders/createorder/1
+  http://127.0.0.1:4000/orders/createorder/2
+  http://127.0.0.1:4000/orders/createorder/3
+  
+  
+{
+  "Order number": 1, 
+  "Products": [
+    {
+      "id": 1, 
+      "name": "monitor", 
+      "price": 1000, 
+      "product_id": 1
+    }, 
+    {
+      "id": 2, 
+      "name": "laptop", 
+      "price": 5000, 
+      "product_id": 2
+    }, 
+    {
+      "id": 3, 
+      "name": "mouse", 
+      "price": 120, 
+      "product_id": 3
+    }
+  ], 
+  "Total price": 6120.0
+}  
+
+  
+</code></pre>
+
+
+
+<p>Para finalizar a compra basta acessar a rota "/orders/createorder/submit". Se recebeu a mensagem abaixo significa que está tudo ok:</p>
+
+<code><pre> 
+  http://127.0.0.1:4000/orders/createorder/submit
+  
+  Submit!
+
+  
+</code></pre>
+
+<p>Agora entrando na rota "/orders/all" é possível ver a nossa ordem cadastrada:</p>
+
+
+<code><pre>
+
+http://127.0.0.1:4000/orders/all
+
+[
+  [
+    {
+      "id": 1, 
+      "name": "monitor", 
+      "price": 1000, 
+      "product_id": 1
+    }, 
+    {
+      "id": 2, 
+      "name": "laptop", 
+      "price": 5000, 
+      "product_id": 2
+    }, 
+    {
+      "id": 3, 
+      "name": "mouse", 
+      "price": 120, 
+      "product_id": 3
+    }
+  ]
+]
+
+
+
+</code></pre>
+
+
+
 
