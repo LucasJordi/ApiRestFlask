@@ -83,5 +83,19 @@
 }
 </code></pre>
 
+<p>Para ter acesso a um cliente em específico basta ir para a rota /clients/id_do_cliente</p>
 
+
+<code><pre>
+  <h3>http://127.0.0.1:4000/clients/2</h3>
+  [
+  {
+    "email": "amandapache@gmmail.com", 
+    "id": 2, 
+    "name": "Amanda Pacheco", 
+    "number": "71222342", 
+    "password": "123"
+  }
+]
+</code></pre>
 
