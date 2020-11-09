@@ -87,7 +87,7 @@
 
 
 <code><pre>
-  <h3>http://127.0.0.1:4000/clients/2</h3>
+  http://127.0.0.1:4000/clients/2
   [
   {
     "email": "amandapache@gmmail.com", 
