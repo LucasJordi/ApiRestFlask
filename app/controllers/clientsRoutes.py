@@ -1,7 +1,7 @@
 from app import app
 from flask import jsonify,request
 from .tables.clients import clients
-from .tables.products import products
+
 
 
 
@@ -10,7 +10,7 @@ from .tables.products import products
 def ClientsView():
     return jsonify({'message':'Clients List','Clients':clients})
 
-#Acess a specific clients in list
+#Acess a specific client
 
 @app.route('/clients/<int:client_id>')
 def FindClient(client_id):
@@ -19,6 +19,8 @@ def FindClient(client_id):
         return jsonify(search_id)
     return 'Client not Found!'
 
+
+#Using the 'POST' method to add a client
 
 @app.route('/clients',methods=['POST'])
 def AddClient():
@@ -33,6 +35,7 @@ def AddClient():
     return 'Received'
 
 
+#Update client using 'PUT' method
 
 @app.route('/clients/<int:client_id>',methods=['PUT'])
 def EditClient(client_id):
@@ -44,3 +47,16 @@ def EditClient(client_id):
         search_id[0]['password']=request.json['password']
         return 'Save changes!'
     return 'Not found'    
+
+#Delete client using 'DELETE' method
+@app.route('/clients/<int:client_id>',methods=['DELETE'])
+def DeleteClient(client_id):
+    search_id=[client for client in clients if client['id'] == client_id]
+    if(len(search_id)>0):
+        clients.remove(search_id[0])
+        return 'Deleted!'
+    return 'Not Found!'    
+
+
+
+
