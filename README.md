@@ -5,7 +5,7 @@
 <h2>Descrição </h2>
 
 
-<p> O objetivo deste código foi criar uma API REST para simular uma loja virutal. Contendo cadastro de clientes, produtos e pedidos. Dúvidas entrar em contato em lucasjordinds@hotmail.com .</p>
+<p> O objetivo deste código foi criar uma API REST para simular uma loja virutal. Contendo cadastro de clientes, produtos e pedidos. Dúvidas entrar em contato em lucasjordinds@hotmail.com. Para acessar a aplicação acesse o link https://api-flask-commerce.herokuapp.com/</p>
 
 
 <h2>Organização de arquivos</h2>
